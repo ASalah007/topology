@@ -76,11 +76,15 @@ public class API {
                 break;
             }
         }
+        if(top == null)
+            return null;
         return top.getComponents();
     }
 
     public static List<Device> queryDevicesWithNetlistNode(String topologyId, String netlistNodeId){
         List<Device> devices = queryDevices(topologyId);
+        if(devices == null) 
+            return null;
         List<Device> result = new ArrayList<>();
         for(Device d : devices){
             HashMap<String, String> netlist = d.getNetlist();
@@ -96,7 +100,7 @@ public class API {
 
     public static void main(String[] args){
         try{
-            readJSON(Path.of("topology.json"));
+            readJSON(Path.of("topology2.json"));
             writeJSON("top1", "out.json");
         }
         catch(Exception ex){
