@@ -1,8 +1,8 @@
 # Topology
 
 # Documentation
-* [API.java](##API.java)
-* [JSON.Topology.java](##JSON.Topology.java)
+* [API.java](#apijava)
+* [JSON.Topology.java](#jsontopologyjava)
 
 ## API.java
 ###  readJSON(Path) : Topology
